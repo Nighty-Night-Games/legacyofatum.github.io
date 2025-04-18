@@ -354,7 +354,11 @@ p {
 
 /* About Game Modal Styles */
 .about-game-wrapper {
+    background: url('images/menuart/grunge-paper-background-min.jpg') no-repeat center center;
+    background-size: cover; 
     padding: 40px;
+    border: 5px solid #D4AF37;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
     width: 80%;
     height: 75vh; /* Adjusted for a more immersive look */
     margin: auto;
@@ -363,36 +367,31 @@ p {
     left: 2.5%;
     right: 2.5%;
     overflow-y: auto;
-    z-index: 1001; /* Updated z-index */
-    backdrop-filter: blur(10px); /* Optional blur effect for background */
+    z-index: 1;
 }
 
+/* Enhanced Dark Overlay for Full Scrolling Coverage */
+.about-game-wrapper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity for readability */
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
 
 /* Encyclopedia Style Layout */
 .about-game-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(800px, 2fr)); /* Increased box size */
-    gap: 50px; /* More space between boxes */
-    padding: 50px;
+    gap: 0.1px; /* More space between boxes */
+    padding: 0px;
 }
 
-/* Close Button Styling */
-.close-about-game {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: #FFD700; /* Gold color */
-    font-size: 28px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 5000;
-}
-
-.close-about-game:hover {
-    color: #D4AF37; /* Darker gold on hover */
-}
 
 /* Topic Box Enhancements */
 .about-topic {
@@ -436,6 +435,7 @@ p {
     opacity: 0;
     pointer-events: none;
 }
+
 
 /* Decorative Corners */
 .about-topic .corner {
@@ -553,6 +553,7 @@ p {
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
+
 /* Ensure popup shows on hover */
 .about-topic:hover .popup-info {
     opacity: 1;
@@ -613,6 +614,7 @@ p {
 .popup-info::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(145deg, #3b658d, #375a7f);
 }
+
 
 
 
@@ -852,7 +854,7 @@ p {
     padding: 5vh 10vw;
     position: relative;
     z-index: 2;
-    background-image: url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 28v-4L36 12 24 24 12 12 0 24v4l4 4-4 4v4l12 12 12-12 12 12 12-12v-4l-4-4 4-4zM8 32l-6-6 10-10 10 10-6 6 6 6-10 10L2 38l6-6zm12 0l4-4 4 4-4 4-4-4zm12 0l-6-6 10-10 10 10-6 6 6 6-10 10-10-10 6-6zM0 16L10 6 4 0h4l4 4 4-4h4l-6 6 10 10L34 6l-6-6h4l4 4 4-4h4l-6 6 10 10v4L36 8 24 20 12 8 0 20v-4zm0 32l10 10-6 6h4l4-4 4 4h4l-6-6 10-10 10 10-6 6h4l4-4 4 4h4l-6-6 10-10v-4L36 56 24 44 12 56 0 44v4z' fill='%23fafafa' fill-opacity='0.10' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 28v-4L36 12 24 24 12 12 0 24v4l4 4-4 4v4l12 12 12-12 12 12 12-12v-4l-4-4 4-4zM8 32l-6-6 10-10 10 10-6 6 6 6-10 10L2 38l6-6zm12 0l4-4 4 4-4 4-4-4zm12 0l-6-6 10-10 10 10-6 6 6 6-10 10-10-10 6-6zM0 16L10 6 4 0h4l4 4 4-4h4l-6 6 10 10L34 6l-6-6h4l4 4 4-4h4l-6 6 10 10v4L36 8 24 20 12 8 0 20v-4zm0 32l10 10-6 6h4l4-4 4 4h4l-6-6 10-10 10 10-6 6h4l4-4 4 4h4l-6-6 10-10v-4L36 56 24 44 12 56 0 44v4z' fill='%23fafafa' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
     background-size: 110px 135px; /* Adjusted for a balanced repeat effect */
     background-color: #181818; /* Base background color */
     background-blend-mode: overlay; /* Layered blend modes for better control */

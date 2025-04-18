@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy of Atum: Dead Dynasty</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+
+<!-- Floating Header ####################################################-->
+<header class="floating-header">
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>""Legacy of Atum: Dead Dynasty" is Forging its Path – Pre-Production in Progress</h1>
+            <p>Explore the early vision of a world where myth and history collide. Follow our journey, witness our progress, and be among the first to shape the destiny of a dying dynasty..</p>
+        </div>
+        <div class="logo-container">
+            <a href="#" id="logo-link" aria-label="Legacy of Atum Home">
+                <img src="images/logo/7.png" alt="Legacy of Atum Logo" class="logo">
+            </a>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section ####################################################-->
+<section class="hero">
+    <div class="hero-content"></div>
+    <div class="particles" id="particles"></div>
+    <div class="hero-animation"></div>
+</section>
+
+<!-- Divider Section Between Hero and Scrolling Section -->
+<section class="divider-section">
+    <div class="divider-content">
+    </div>
+</section>
+
+
+<!-- Horizontally Scrolling Section ####################################################-->
+<section class="scrolling-section">
+    <div class="scroll-container">
+        <!-- Scroll Item Acting as Entry Point -->
+        <article class="scroll-item scroll-item-common scroll-item-image" id="entry-item">
+            <img src="images/The Sinking Temple of Sobek.png" alt="Concept Art of Sinking Temple of Sobek" class="scroll-image">
+            <div class="scroll-text">
+                <h2>A Glimpse Into My Vision</h2>
+                <p>Explore the atmosphere and style of Legacy of Atum through early concept art.</p>
+                <button class="explore-button">Explore Gallery</button>
+            </div>
+        </article>
+
+        <!-- Full-Screen Gallery Modal -->
+        <div class="gallery-modal" id="gallery-modal">
+            <div class="gallery-content">
+                <button class="close-gallery" id="close-gallery">&times;</button>
+                <div class="gallery-grid">
+                    <!-- Uniform Sized Concept Art Items -->
+                    <img src="images/The Valley of Shadows.png" class="gallery-item" alt="Art 1">
+                    <img src="images/The Sandstorm Fortress.png" class="gallery-item" alt="Art 2">
+                    <img src="images/The Sinking Temple of Sobek.png" class="gallery-item" alt="Art 3">
+                    <!-- Add more concept art images here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox for Full-Size Images -->
+        <div class="lightbox" id="lightbox">
+            <span class="close-lightbox" id="close-lightbox">&times;</span>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="Full Size Image">
+        </div>
+
+        <!-- Additional Scroll Items with Consistent Design -->
+        <article class="scroll-item scroll-item-common">
+            <img src="images/locations/landmarks/The%20Sandstorm%20Fortress.png" alt="Concept Art 2" class="scroll-image">
+            <div class="scroll-text">
+                <h2>Welcome to the Legacy of Atum: Dead Dynasty</h2>
+                <p>Explore a rich, immersive world of ancient Egypt, where history meets mythology. Experience a dying dynasty and a story filled with survival, choices, and destiny.</p>
+                <button class="explore-button">Learn More</button>
+            </div>
+        </article>
+        
+        <article class="scroll-item scroll-item-common">
+            <img src="images/The%20Valley%20of%20Shadows.png" alt="Concept Art 3" class="scroll-image">
+            <div class="scroll-text">
+                <h2>Discover the Story Unfolding</h2>
+                <p>Uncover the narrative that drives this world. From ancient conflicts to mythical beings, learn what makes this story unique.</p>
+                <button class="explore-button">Read Lore</button>
+            </div>
+        </article>
+        
+        <article class="scroll-item scroll-item-common">
+            <img src="images/locations/pois/Forgotten%20Library%20Ruins.png" alt="Concept Art 4" class="scroll-image">
+            <div class="scroll-text">
+                <h2>Crafting a New World</h2>
+                <p>Get a peek behind the scenes as the world of Atum shapes. Understand the creative process and the passion that fuels this journey.</p>
+                <button class="explore-button">The Process</button>
+            </div>
+        </article>
+        
+        <article class="scroll-item scroll-item-common">
+            <img src="images/locations/settlements/villages/Wadi%20el-Natrun’s%20Monastic%20Retreat_Night.png" alt="Concept Art 5" class="scroll-image">
+            <div class="scroll-text">
+                <h2>Join My Journey</h2>
+                <p>Stay updated on my progress by following the project on social media, joining the newsletter, or connecting with the community on Discord.</p>
+                <a href="https://x.com/LegacyOfAtum" target="_blank">
+                    <button class="explore-button">Join</button>
+                </a>
+            </div>
+        </article>
+        
+        <article class="scroll-item scroll-item-common">
+            <img src="images/locations/monuments/The%20Great%20Wall%20of%20the%20Lost%20City.png" alt="Concept Art 6" class="scroll-image">
+            <div class="scroll-text">
+                <h2>What's Next?</h2>
+                <p>I'm working hard to bring you more. Expect gameplay prototypes, sneak peeks, and trailers as we move forward.</p>
+                <button class="explore-button">What's Next</button>
+            </div>
+        </article>
+        
+        <article class="scroll-item scroll-item-common">
+            <img src="images/KingPepiII_01.png" alt="Concept Art 7" class="scroll-image">
+            <div class="scroll-text">
+                <h2>Support this project in Bringing Legacy of Atum to Life</h2>
+                <p>Your support helps shape the world of Atum. Share this journey, spread the word, and be part of something extraordinary.</p>
+                <a href="https://x.com/LegacyOfAtum" target="_blank">
+                    <button class="explore-button">Share</button>
+                </a>
+            </div>
+        </article>
+        
+        
+    </div>
+</section>
+
+<!-- Divider Section Between Hero and Scrolling Section -->
+<section class="divider-section">
+    <div class="divider-content">
+    </div>
+</section>
+
+<!-- Footer Section ####################################################-->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>Legacy of Atum: Dead Dynasty</h2>
+            <p>"Legacy of Atum: Dead Dynasty" is a story-driven, open-world action RPG for PC, set in ancient Egypt. Blending historical accuracy with mythological elements, the game challenges players with survival mechanics, complex combat, and strategic gameplay as they navigate the turmoil of a dying dynasty. Players will experience a deeply immersive world, uncover hidden lore, and make impactful choices that shape their journey.</p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="https://x.com/LegacyOfAtum" target="_blank" class="social-icon" aria-label="Twitter">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/@LegacyofAtum" target="_blank" class="social-icon" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.twitch.tv/legacyofatum" target="_blank" class="social-icon" aria-label="Twitch">
+                <i class="fab fa-twitch"></i>
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Legacy of Atum. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- ####################### JAVASCRIPT #############################-->
+<script>
+// Improved script for parallax effect and button animations
+
+document.addEventListener('scroll', () => {
+    const parallax = document.querySelector('.hero-animation');
+    if (parallax) {
+        let offset = window.pageYOffset;
+        parallax.style.backgroundPositionY = `${offset * 0.5}px`;
+    }
+});
+
+// Function for smooth scroll effect
+const smoothScroll = (event) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+        });
+    }
+}
+
+// Add event listeners to all anchors with href starting with #
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', smoothScroll);
+});
+
+// Performance optimization for scroll event (requestAnimationFrame)
+let latestKnownScrollY = 0;
+let ticking = false;
+
+const onScroll = () => {
+    latestKnownScrollY = window.scrollY;
+    requestTick();
+};
+
+const requestTick = () => {
+    if (!ticking) {
+        requestAnimationFrame(update);
+    }
+    ticking = true;
+};
+
+const update = () => {
+    ticking = false;
+    // Here you can add further scroll-related functionality if needed
+};
+
+window.addEventListener('scroll', onScroll);
+
+// =================== Hero Background Switching Logic ===================
+document.addEventListener('DOMContentLoaded', () => {
+    const heroSection = document.querySelector('.hero');
+    let currentBackgroundIndex = 0;
+    let intervalId;
+
+    const heroBackgrounds = [
+        'images/02_Wawat(Night).png',
+        'images/02_Into the Desert.png',
+        'images/04_Esna at Night (Randsacked).png',
+        'images/03_Wawat (Fortress).png',
+        'images/04_Esna at Night.png',
+    ];
+
+    function preloadImages(urls) {
+        urls.forEach(url => {
+            const img = new Image();
+            img.src = url;
+        });
+    }
+
+    function setRandomBackground() {
+        currentBackgroundIndex = Math.floor(Math.random() * heroBackgrounds.length);
+        setHeroBackground(currentBackgroundIndex);
+    }
+
+    function setHeroBackground(index) {
+        const tempLayer = document.createElement('div');
+        tempLayer.className = 'hero-image';
+        tempLayer.style.backgroundImage = `url('${heroBackgrounds[index]}')`;
+        tempLayer.style.opacity = 0;
+
+        heroSection.appendChild(tempLayer);
+        setTimeout(() => {
+            tempLayer.style.opacity = 1;
+        }, 50);
+
+        setTimeout(() => {
+            const oldLayers = document.querySelectorAll('.hero-image');
+            oldLayers.forEach((layer, i) => {
+                if (i < oldLayers.length - 1) {
+                    layer.remove();
+                }
+            });
+        }, 1000);
+    }
+
+    function setNextBackground() {
+        currentBackgroundIndex = (currentBackgroundIndex + 1) % heroBackgrounds.length;
+        setHeroBackground(currentBackgroundIndex);
+    }
+
+    function startAutomaticBackgroundChange() {
+        setTimeout(() => {
+            intervalId = setInterval(setNextBackground, 15000);
+        }, 10000); // Set the initial delay of 10 seconds before switching backgrounds
+    }
+
+    window.onload = function () {
+        preloadImages(heroBackgrounds);
+        setRandomBackground();
+        startAutomaticBackgroundChange();
+    };
+
+    window.onunload = function () {
+        clearInterval(intervalId);
+    };
+});
+
+// Smooth Scrolling Logic ##########################################################
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollSection = document.querySelector('.scrolling-section');
+    const scrollContainer = document.querySelector('.scroll-container');
+    let scrollPosition = 0;
+    let scrollDirection = 1; // 1 for right, -1 for left
+    let autoScrollInterval;
+    let isHovering = false;
+
+    // Function to handle auto-scrolling
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            if (!isHovering) {
+                // Calculate maximum scroll position
+                const maxScrollPosition = scrollContainer.scrollWidth - scrollSection.clientWidth;
+
+                // Adjust the scroll position
+                scrollPosition += 1 * scrollDirection;
+
+                // Reverse direction if boundaries are reached
+                if (scrollPosition >= maxScrollPosition || scrollPosition <= 0) {
+                    scrollDirection *= -1; // Change direction
+                }
+
+                // Apply the scroll position
+                scrollContainer.style.transform = `translateX(${-scrollPosition}px)`;
+            }
+        }, 60); // Adjust speed by changing the interval time (lower = faster)
+    }
+
+    // Function to pause auto-scroll when hovering
+    scrollSection.addEventListener('mouseenter', () => {
+        isHovering = true;
+        clearInterval(autoScrollInterval);
+    });
+
+    // Resume auto-scroll when not hovering
+    scrollSection.addEventListener('mouseleave', () => {
+        isHovering = false;
+        startAutoScroll();
+    });
+
+    // Initialize scrolling on load
+    window.addEventListener('load', () => {
+        startAutoScroll();
+    });
+
+    // Manual scrolling logic
+    scrollSection.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        clearInterval(autoScrollInterval); // Pause auto-scrolling during manual scroll
+        scrollPosition += event.deltaY * 4;
+        const maxScrollPosition = scrollContainer.scrollWidth - scrollSection.clientWidth;
+        scrollPosition = Math.max(0, Math.min(scrollPosition, maxScrollPosition));
+        scrollContainer.style.transform = `translateX(${-scrollPosition}px)`;
+    }, { passive: false });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const entryItem = document.getElementById('entry-item');
+    const galleryModal = document.getElementById('gallery-modal');
+    const closeGallery = document.getElementById('close-gallery');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeLightbox = document.getElementById('close-lightbox');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Open the gallery modal on click
+    entryItem.addEventListener('click', () => {
+        galleryModal.style.display = 'flex';
+    });
+
+    // Close the gallery modal
+    closeGallery.addEventListener('click', () => {
+        galleryModal.style.display = 'none';
+    });
+
+    // Open the lightbox with full-size image
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            lightboxImage.src = item.src; // Use the same source as the clicked image
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    // Close the lightbox
+    closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        lightboxImage.src = ''; // Clear the image source when closed
+    });
+});
+
+window.addEventListener('scroll', () => {
+    const parallaxElements = document.querySelectorAll('.parallax-background');
+    parallaxElements.forEach(el => {
+        let offset = window.pageYOffset;
+        el.style.backgroundPositionY = `${offset * 0.5}px`;
+    });
+});
+
+
+
+</script>
+
+</body>
+</html>

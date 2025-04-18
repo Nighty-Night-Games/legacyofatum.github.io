@@ -1,0 +1,627 @@
+:root {
+    --primary-color: #D4AF37;
+    --secondary-color: #EAEAEA;
+    --background-color: #0d0d0d;
+    --accent-color: #FFD700;
+    --font-family-primary: 'Cinzel', serif;
+    --font-family-secondary: 'Arial', sans-serif;
+    --font-size-large: 34px;
+    --font-size-medium: 26px;
+    --font-size-small: 16px;
+    --transition-speed: 0.4s;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: var(--font-family-secondary);
+    color: var(--secondary-color);
+    background: var(--background-color);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Typography */
+h1 {
+    margin: 0;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+h2, h3, p {
+    margin: 0;
+    font-family: var(--font-family-primary);
+    color: var(--secondary-color);
+}
+
+.scroll-item h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 32px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.scroll-item p {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+/* Header */
+.floating-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+.nav-links h1 {
+    font-family: var(--font-family-primary);
+    font-size: 28px;
+    color: var(--primary-color);
+    max-width: 40%; /* Further reduced to encourage line breaks */
+    text-align: center;
+    white-space: normal; /* Allows the text to wrap */
+    overflow-wrap: break-word; /* Allows breaking within words if needed */
+    margin: 0 auto;
+    line-height: 1.4; /* Adjusts the spacing between lines */
+    padding: 0 10px;
+}
+
+
+.logo-container {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    object-fit: cover;
+    cursor: pointer;
+    transition: border-color var(--transition-speed), transform var(--transition-speed);
+    margin-left: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 223, 186, 0.5);
+}
+
+@media (max-width: 768px) {
+    .floating-header {
+        padding: 10px 20px;
+    }
+
+    .nav-links h1 {
+        font-size: 20px;
+        max-width: 70%; /* Adjusted width for smaller screens */
+        line-height: 1.2;
+    }
+
+    .logo {
+        height: 55px;
+        width: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links h1 {
+        font-size: 18px;
+        max-width: 80%; /* Adjusted width for smaller screens */
+        line-height: 1.2;
+    }
+
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    transition: opacity 0.5s ease-in-out, background-image 1s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+/* Active State */
+.hero-image.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.parallax-background {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-position 0.2s ease-out;
+}
+
+/* Divider Section with Golden Hue and Hieroglyphs */
+.divider-section {
+    position: relative;
+    height: 5px; /* Thin height for subtle effect */
+    background: #0d0d0d; /* Base black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Hieroglyphics Layer with Golden Hue */
+.divider-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4; /* Lower opacity for a subtle effect */
+    pointer-events: none;
+    mix-blend-mode: overlay; /* Blend mode to softly integrate the texture */
+    filter: hue-rotate(40deg) brightness(1.2); /* Adds a golden hue */
+    z-index: 2;
+}
+
+/* Golden Glow Effect */
+.divider-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0)); /* Creates a golden glow */
+    z-index: 3;
+    pointer-events: none;
+}
+
+
+/* Scrolling Section with Texture Layer */
+.scrolling-section {
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #181818; /* Base color for the section */
+    padding: 5vh 10vw;
+    position: relative;
+    z-index: 2;
+}
+
+/* Texture Layer for the Scrolling Section */
+.scrolling-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/LOA_BackgroundTexture01.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Lower opacity to ensure texture is subtle */
+    pointer-events: none; /* Ensures the texture does not interfere with interactions */
+    mix-blend-mode: overlay; /* Blend mode to softly integrate the texture */
+    z-index: 1; /* Places the texture behind the scroll items */
+}
+
+/* Scroll Container */
+.scroll-container {
+    position: relative;
+    z-index: 2; /* Keeps scroll items above the textured background */
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 60px;
+    transition: transform 0.9s ease-out;
+    padding: 0 50px;
+}
+
+/* Each Scroll Item */
+.scroll-item {
+    flex: 0 0 28vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(50, 40, 30, 0.85);
+    color: #FFD700;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    border: 2px solid #d4af37;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* Texture Layer */
+.scroll-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/LOA_BackgroundTexture01.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.scroll-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Specific Scroll Item with Image */
+.scroll-item-image {
+    flex: 0 0 28vw;
+    height: 35vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.scroll-item-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/LOA_BackgroundTexture01.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.scroll-item-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(255, 215, 0, 0.8);
+}
+
+.scroll-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Text Overlay on Image */
+.scroll-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+    z-index: 2;
+}
+
+.scroll-text h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.scroll-text p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.scroll-item-image:hover .scroll-text {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.scroll-item:hover .scroll-text {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .scroll-item {
+        flex: 0 0 60vw;
+        height: 30vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-item {
+        flex: 0 0 80vw;
+        height: 25vh;
+    }
+}
+
+/* Button Styling */
+.explore-button {
+    background-color: #FFD700;
+    color: #000;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for movement */
+    position: relative;
+}
+
+/* Move the button when the scroll item is hovered */
+.scroll-item:hover .explore-button {
+    transform: translateY(-5px); /* Adjust this value to control how much the button moves */
+}
+
+.explore-button:hover {
+    background-color: #d4af37;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Full-Screen Gallery */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Lightbox for Full-Size Image */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1100;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #FFD700;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #1a1a1a;
+    color: var(--secondary-color);
+    font-family: var(--font-family-primary);
+    padding: 40px 20px;
+    border-top: 2px solid #333;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.footer-about {
+    flex: 1 1 100%;
+    text-align: center;
+    order: 2;
+}
+
+.footer-about h2 {
+    color: var(--primary-color);
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: var(--font-size-small);
+    color: #B8B8B8;
+}
+
+.footer-links {
+    flex: 1 1 auto;
+    order: 1;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    align-items: center;
+    order: 3;
+}
+
+.footer-social .social-icon {
+    font-size: 28px;
+    color: #B8B8B8;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.footer-social .social-icon:hover {
+    transform: scale(1.1);
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-about {
+        flex: 1 1 500px;
+        order: 2;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex: 1 1 150px;
+        order: 1;
+        text-align: left;
+    }
+
+    .footer-social {
+        flex: 1 1 100px;
+        order: 3;
+        justify-content: flex-end;
+    }
+}
