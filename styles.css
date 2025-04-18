@@ -1,0 +1,27 @@
+body {
+  font-family: 'Cinzel', serif;
+  background-color: #0a0a0a;
+  color: #f5f1e6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  opacity: 0.8;
+}
