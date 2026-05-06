@@ -1,423 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Legacy of Atum: Dead Dynasty</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
-    </head>
-<body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Night Night Studios</title>
 
-<!-- Floating Header -->
-<div class="top-bar"></div>
-<header class="floating-header">
-    <nav class="navbar">
-        <div class="nav-logo">
-            <h1 class="header-title">
-                "Legacy of Atum: Dead Dynasty" is Forging its Path!
-                            <!-- Divider Bar -->
-            <div class="header-divider"></div>
-                <span class="subtext">Development Phase: Pre-Production</span>
-            </h1>
-        </div>
-        <div class="logo-container">
-            <a href="#" id="logo-link" aria-label="Legacy of Atum Home">
-                <img src="images/logo/7.png" alt="Legacy of Atum Logo" class="logo lazyload">
-            </a>
-        </div>
-    </nav>
-</header>
-
-
-<!-- Popup Menu Structure -->
-<div class="popup-menu" id="popupMenu">
-    <div class="popup-content">
-        <button class="close-menu" id="closeMenu">&times;</button>
-        <h2 class="menu-title">MENU</h2>
-        <ul class="menu-list">
-        <li><a href="#" id="about-game-button">About The Game</a></li>
-        <li><a href="#gallery.html">Gallery</a></li>
-        <li><a href="#dev-log.html">Development Log</a></li>
-        <li><a href="#lore-world.html">Lore / World</a></li>
-        <li><a href="#support-the-project.html">Supporters</a></li>
-        <li><a href="#connect.html">Connect</a></li>
-        <li><a href="#faq.html">FAQ</a></li>
-        <li><a href="#press-media-kit.html">Press/Media Kit</a></li>
-        <li><a href="#roadmap.html">Roadmap</a></li>
-    </ul>
-</div>
-</div>
-
-<!-- About Game Modal Structure -->
-<div class="about-game-modal" id="aboutGameModal">
-    <div class="modal-content">
-        <button class="close-about-game" id="closeAboutGame">&times;</button>
-        <div class="about-game-wrapper">
-            <div class="about-game-section">
-                <div class="about-topic" id="overview">
-                <h3>Game Overview</h3>
-                <p>Explore a world where history and mythology intertwine in this open-world RPG set in ancient Egypt.</p>
-                <div class="popup-info">Legacy of Atum: Dead Dynasty is an open-world RPG set in a richly detailed world inspired by ancient Egypt. 
-                    The game blends historical events with mythology, allowing players to explore a vast landscape filled with ancient ruins, mythical creatures, and complex factions.
-                    <br><br>
-                    Players assume the role of a character caught in the turmoil of a crumbling dynasty, making strategic choices that impact the fate of the world. Survival mechanics, 
-                    deep narrative choices, and strategic combat are key gameplay elements, encouraging players to engage in resource management, exploration, and character development. 
-                    <br><br>
-                    The game's unique art style, inspired by Egyptian iconography and mystical aesthetics, enhances the immersive experience, drawing players into a world where myth and reality blur.</div>
-                <div class="overlay"></div>
-                <div class="corner top-left"></div>
-                <div class="corner bottom-right"></div>
-            </div>
-            <div class="about-topic" id="story-setting">
-                <h3>Story and Setting</h3>
-                <p>Experience a narrative-driven journey set in a rich, immersive world where your choices shape the fate of a dying dynasty.</p>
-                <div class="popup-info">Legacy of Atum: Dead Dynasty unfolds in the last days of a great empire, where ancient gods and mortal rulers clash for control. 
-                    Set against the backdrop of a declining Egypt, players explore a world torn by political intrigue, supernatural forces, and societal collapse.
-                    <br><br>
-                    The story is centered around Nui, a young protagonist whose life is upended by tragedy, setting him on a journey of survival and vengeance. 
-                    As the lines between myth and reality blur, players will encounter powerful factions, mystical artifacts, and gods influencing the world’s fate.
-                    <br><br>
-                    Explore vast deserts, treacherous river valleys, forgotten cities, and mystical temples as you uncover secrets that shape the story. 
-                    Choices matter—each decision made by the player alters the course of the narrative, influencing alliances, altering the balance of power, and determining the future of a crumbling dynasty.</div>
-                <div class="overlay"></div>
-                <div class="corner top-left"></div>
-                <div class="corner bottom-right"></div>
-            </div>
-            
-            <div class="about-topic" id="key-features">
-                <h3>Key Features</h3>
-                <p>Dive into dynamic storytelling, strategic combat, and a world that reacts to your actions.</p>
-                <div class="popup-info">
-                    <ul style="text-align: left; padding: 20px; list-style-type: disc; max-height: 80%; overflow-y: auto;">
-                        <li><strong>Dynamic Storytelling:</strong> Experience a narrative that evolves based on your decisions. Every choice you make influences character relationships, story outcomes, and world dynamics.</li>
-                        <br><br>
-                        <li><strong>Strategic Combat:</strong> Engage in tactical battles where preparation and strategy are crucial. Choose your weapons, abilities, and allies wisely to outsmart enemies.</li>
-                        <br><br>
-                        <li><strong>Reactive World:</strong> The game world reacts dynamically to your actions. Your choices affect the environment, factions, and power dynamics, ensuring a unique playthrough every time.</li>
-                    </ul>
-                </div>
-                <div class="overlay"></div>
-                <div class="corner top-left"></div>
-                <div class="corner bottom-right"></div>
-            </div>
-            
-            
-            <div class="about-topic" id="gameplay-mechanics">
-                <h3>Gameplay Mechanics</h3>
-                <p>Master survival and strategy as you manage resources, complete quests, and explore a vibrant, ever-changing environment.</p>
-                <div class="popup-info">
-                    <ul style="text-align: left; padding: 20px; list-style-type: disc;">
-                        <li><strong>Survival and Resource Management:</strong> Navigate the harsh landscapes of ancient Egypt, managing resources like food, water, and materials to maintain health and stamina.</li>
-                        <br><br>
-                        <li><strong>Strategic Decision-Making:</strong> Your choices influence the world, impacting factions, characters, and overall gameplay dynamics.</li>
-                        <br><br>
-                        <li><strong>Dynamic Quests:</strong> Engage in quests that adapt to your decisions, creating a personalized experience based on your play style.</li>
-                        <br><br>
-                        <li><strong>Exploration of Ever-Changing Environments:</strong> Explore vibrant landscapes that evolve with time, weather, and your actions, offering a unique adventure each time.</li>
-                    </ul>
-                </div>
-                <div class="overlay"></div>
-                <div class="corner top-left"></div>
-                <div class="corner bottom-right"></div>
-            </div>
-            
-            <div class="about-topic" id="art-direction">
-                <h3>Visual and Artistic Direction</h3>
-                <p>Discover the unique art style inspired by ancient Egyptian aesthetics, emphasizing symbolism and atmospheric effects.</p>
-                <div class="popup-info">
-                    "Legacy of Atum: Dead Dynasty" embraces a unique art style deeply inspired by ancient Egyptian aesthetics, blending realism with stylized elements that highlight the symbolic and mystical. The game’s visuals draw heavily from hieroglyphs, statues, and architecture, reimagined with a touch of the supernatural. 
-                    <br><br>
-                    Emphasizing symbolism, the art uses bold colors and contrasts—deep blues, golds, and earthy tones—to evoke emotions tied to the story. Atmospheric effects like dynamic lighting, shadows, sandstorms, and fog create a deeply immersive world, enhancing the sense of ancient mysticism and a civilization in decline.
-                    <br><br>
-                    Each environment and character design reflects historical authenticity mixed with imaginative interpretations, making every scene feel like stepping into a vibrant painting from the past, brought to life with modern visual storytelling techniques.
-                </div>
-                <div class="overlay"></div>
-                <div class="corner top-left"></div>
-                <div class="corner bottom-right"></div>
-            </div>
-            
-
-            <div class="about-topic" id="characters-factions">
-                <h3>Characters and Factions</h3>
-                <p>Meet the key characters and factions that shape the narrative and influence your journey.</p>
-                <div class="popup-info">
-                    Meet a diverse cast of characters and powerful factions that drive the story of *Legacy of Atum: Dead Dynasty*. At the heart of the narrative is Nui, a young boy thrust into a turbulent world where his actions will determine the fate of an empire. Alongside him are influential figures like Salih, a wise mentor, and Layla, his fiercely independent sister.
-                    <br><br>
-                    Factions range from the traditional Pharaoh’s guard to mystical cults worshipping forgotten gods, each with their own motives, alliances, and secrets. These groups influence every decision, offering unique quests, alliances, and rivalries that will shape your journey. Whether aligning with rebel leaders or ancient order priests, your choices impact not just your fate, but the entire world’s destiny.
-                </div>
-                <div class="overlay"></div>
-                <div class="corner top-left"></div>
-                <div class="corner bottom-right"></div>
-            </div>
-            
-
-            <div class="about-topic" id="dev-vision">
-                <h3>Development Vision</h3>
-                <p>Learn about the creator’s inspiration and the challenges faced in bringing Legacy of Atum to life.</p>
-                <div class="popup-info">
-                    The development of *Legacy of Atum: Dead Dynasty* is just beginning, driven by a vision inspired by the mysteries and grandeur of ancient Egypt. 
-                    I am exploring how to blend history, mythology, and personal storytelling into a unique game experience. 
-                    <br><br>
-                    There are many challenges ahead, including crafting a compelling narrative, designing a reactive world, and balancing gameplay with artistic direction. 
-                    This early stage of development focuses on refining the core ideas, building prototypes, and facing the obstacles of turning a passion project into a fully realized game.
-                </div>
-                <div class="overlay"></div>
-                <div class="corner top-left"></div>
-                <div class="corner bottom-right"></div>
-            </div>
-            
-            <div class="about-topic" id="call-to-action">
-                <h3>Become a Supporter</h3>
-                <p>Stay updated, engage with the community, and support the ongoing development of this unique RPG experience.</p>
-                <div class="popup-info">
-                    Your support is crucial in shaping *Legacy of Atum: Dead Dynasty*. Stay connected and share your feedback, which directly influences the game’s features and story. 
-                    By engaging with our community, you help us create a more immersive experience tailored to players’ desires. 
-                    <br><br>
-                    Supporting the project accelerates development, bringing new updates and content faster, ensuring a polished end product. Together, we can forge a legendary RPG that truly reflects our passion as gamers!
-                </div>
-                <div class="overlay"></div>
-                <div class="corner top-left"></div>
-                <div class="corner bottom-right"></div>
-            </div>
-            
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Hero Section ####################################################-->
-<section class="hero">
-    <div class="hero-content"></div>
-    <div class="hero-animation"></div>
-</section>
-
-<!-- Vision Section -->
-<div class="vision-section">
-    <div class="vision-content">
-        <p class="vision-text">
-            "In Legacy of Atum, the line between myth and reality blurs as ancient gods, forgotten empires, and mortal ambition collide. 
-            Unravel the secrets of a world in chaos, where every decision shapes a dynasty's fate. Stand against time's tide, forge your legacy, and let the echoes of the past guide your journey."
-        </p>
-                                    <!-- Divider Bar -->
-                                    <div class="short-divider"></div>
-
-    </div>
-</div>
-
-
-<!-- Horizontally Scrolling Section ####################################################-->
-<section class="scrolling-section">
-    <div class="scroll-container">
-        <!-- Scroll Item Acting as Entry Point -->
-        <article class="scroll-item scroll-item-common scroll-item-image" id="entry-item">
-            <img src="images/The Sinking Temple of Sobek.png" alt="Concept Art of Sinking Temple of Sobek" class="scroll-image" class="lazyload">
-            <div class="scroll-text">
-                <h2>A Glimpse Into My Vision</h2>
-                <p>Explore the atmosphere and style of Legacy of Atum through early concept art.</p>
-                <button class="explore-button" id="explore-gallery-button">Explore Gallery</button>
-            </div>
-        </article>
-
-        <!-- Additional Scroll Items with Consistent Design -->
-        <article class="scroll-item scroll-item-common">
-            <img src="images/locations/landmarks/The%20Sandstorm%20Fortress.png" alt="Concept Art 2" class="scroll-image" class="lazyload">
-            <div class="scroll-text">
-                <h2>Welcome to the Legacy of Atum: Dead Dynasty</h2>
-                <p>Explore a rich, immersive world of ancient Egypt, where history meets mythology. Experience a dying dynasty and a story filled with survival, choices, and destiny.</p>
-                <button class="explore-button" id="about-game-button">Learn More</button> <!-- Add an ID here -->
-            </div>
-        </article>
-        
-        <article class="scroll-item scroll-item-common">
-            <img src="images/The%20Valley%20of%20Shadows.png" alt="Concept Art 3" class="scroll-image" class="lazyload">
-            <div class="scroll-text">
-                <h2>Discover the Story Unfolding</h2>
-                <p>Uncover the narrative that drives this world. From ancient conflicts to mythical beings, learn what makes this story unique.</p>
-                <button class="explore-button">Read Lore</button>
-            </div>
-        </article>
-        
-        <article class="scroll-item scroll-item-common">
-            <img src="images/locations/pois/Forgotten%20Library%20Ruins.png" alt="Concept Art 4" class="scroll-image" class="lazyload">
-            <div class="scroll-text">
-                <h2>Crafting a New World</h2>
-                <p>Get a peek behind the scenes as the world of Atum shapes. Understand the creative process and the passion that fuels this journey.</p>
-                <button class="explore-button">The Process</button>
-            </div>
-        </article>
-        
-        <article class="scroll-item scroll-item-common">
-            <img src="images/locations/settlements/villages/Wadi%20el-Natrun’s%20Monastic%20Retreat_Night.png" alt="Concept Art 5" class="scroll-image" class="lazyload">
-            <div class="scroll-text">
-                <h2>Join My Journey</h2>
-                <p>Stay updated on my progress by following the project on social media, joining the newsletter, or connecting with the community on Discord.</p>
-                <a href="https://x.com/LegacyOfAtum" target="_blank">
-                    <button class="explore-button">Join</button>
-                </a>
-            </div>
-        </article>
-        
-        <article class="scroll-item scroll-item-common">
-            <img src="images/locations/monuments/The%20Great%20Wall%20of%20the%20Lost%20City.png" alt="Concept Art 6" class="scroll-image" class="lazyload">
-            <div class="scroll-text">
-                <h2>What's Next?</h2>
-                <p>I'm working hard to bring you more. Expect gameplay prototypes, sneak peeks, and trailers as we move forward.</p>
-                <button class="explore-button">What's Next</button>
-            </div>
-        </article>
-        
-        <article class="scroll-item scroll-item-common">
-            <img src="images/KingPepiII_01.png" alt="Concept Art 7" class="scroll-image" class="lazyload">
-            <div class="scroll-text">
-                <h2>Support this project in Bringing Legacy of Atum to Life</h2>
-                <p>Your support helps shape the world of Atum. Share this journey, spread the word, and be part of something extraordinary.</p>
-                <a href="https://x.com/LegacyOfAtum" target="_blank">
-                    <button class="explore-button">Share</button>
-                </a>
-            </div>
-        </article>
-        
-        
-    </div>
-</section>
-
-<!-- Lychee Gallery Popup -->
-<div id="lychee-popup" class="lychee-popup-overlay" style="display: none;">
-    <div class="lychee-popup-content">
-        <button id="closeLycheePopup" class="close-popup">&times;</button>
-        <iframe id="lychee-iframe" src="" frameborder="0" allowfullscreen loading="lazy"></iframe>
-    </div>
-</div>
-
-
-<!-- Divider Section Between Scrolling and Footer -->
-<section class="divider-section">
-    <div class="divider-content"></div>
-</section>
-
-
-<!-- Footer Section ####################################################-->
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-about">
-            <h2>Legacy of Atum: Dead Dynasty</h2>
-            <p>"Legacy of Atum: Dead Dynasty" is a story-driven, open-world action RPG for PC, set in ancient Egypt. Blending historical accuracy with mythological elements, the game challenges players with survival mechanics, complex combat, and strategic gameplay as they navigate the turmoil of a dying dynasty. Players will experience a deeply immersive world, uncover hidden lore, and make impactful choices that shape their journey.</p>
-        </div>
-        <div class="footer-links">
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <a href="https://x.com/LegacyOfAtum" target="_blank" class="social-icon" aria-label="Twitter">
-                <i class="fab fa-x-twitter"></i>
-            </a>
-            <a href="https://www.youtube.com/@NightyNightGames" target="_blank" class="social-icon" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.twitch.tv/legacyofatum" target="_blank" class="social-icon" aria-label="Twitch">
-                <i class="fab fa-twitch"></i>
-            </a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Legacy of Atum. All rights reserved.</p>
-    </div>
-</footer>
-
-<!-- Placeholder for Lychee Modal -->
-<div id="lychee-gallery-modal" style="display: none;"></div>
-
-<script>
-// Event listener for the Explore button
-document.getElementById('explore-gallery-button').addEventListener('click', function (e) {
-    e.preventDefault();
-    openLycheeGallery();
-});
-
-// Event listener for the Gallery menu button
-document.querySelector('.menu-list a[href="#gallery.html"]').addEventListener('click', function (e) {
-    e.preventDefault();
-    openLycheeGallery();
-});
-
-// Function to open the Lychee gallery popup
-function openLycheeGallery() {
-    document.getElementById('lychee-iframe').src = 'https://legacyofatum.com/gallery'; // Replace with your gallery URL
-    document.getElementById('lychee-popup').style.display = 'flex'; // Show the popup
-}
-
-// Event listener to close the gallery popup
-document.getElementById('closeLycheePopup').addEventListener('click', function () {
-    document.getElementById('lychee-popup').style.display = 'none'; // Hide the popup
-    document.getElementById('lychee-iframe').src = ''; // Clear iframe source when closed
-});
-
-document.getElementById('lychee-popup').addEventListener('click', function (e) {
-    if (e.target === this) {
-        this.style.display = 'none';
-        document.getElementById('lychee-iframe').src = '';
+  <style>
+    * {
+      box-sizing: border-box;
     }
-});
-</script>
 
-<!-- JavaScript to Handle Modal Pop-Up -->
-<script>
-    // Open the About Game Modal
-    document.getElementById('about-game-button').addEventListener('click', function () {
-        document.getElementById('aboutGameModal').classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scroll
-    });
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #050505;
+      color: #f2f0e8;
+      font-family: Georgia, "Times New Roman", serif;
+      overflow: hidden;
+    }
 
-    // Close the About Game Modal
-    document.getElementById('closeAboutGame').addEventListener('click', function () {
-        document.getElementById('aboutGameModal').classList.remove('active');
-        document.body.style.overflow = ''; // Restore background scroll
-    });
+    .landing {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
 
-    // Close the modal when clicking outside the content
-    document.getElementById('aboutGameModal').addEventListener('click', function (e) {
-        if (e.target === this) {
-            this.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
+    .content {
+      transform: translateY(-3vh);
+    }
 
-// Attach hover event listeners to all about-topic elements
-document.querySelectorAll('.about-topic').forEach(topic => {
-    const popup = topic.querySelector('.popup-info');
+    h1 {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: clamp(2rem, 5vw, 3.9rem);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 14px rgba(255, 255, 255, 0.08);
+    }
 
-    topic.addEventListener('mouseenter', function () {
-        topic.classList.add('popup-active');
-        popup.style.opacity = '1';
-        popup.style.visibility = 'visible';
-    });
+    .subtitle {
+      margin-top: 1.6rem;
+      color: #b8b5ad;
+      font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
 
-    topic.addEventListener('mouseleave', function () {
-        topic.classList.remove('popup-active');
-        popup.style.opacity = '0';
-        popup.style.visibility = 'hidden';
-    });
-});
+    .footer-note {
+      position: absolute;
+      left: 50%;
+      bottom: 1.2rem;
+      transform: translateX(-50%);
+      width: min(90%, 720px);
+      color: #5f5d58;
+      font-size: 0.65rem;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-document.getElementById('closeAboutGame').addEventListener('click', function () {
-    document.querySelector('.about-game-wrapper').classList.remove('active');
-    document.body.style.overflow = ''; // Restore background scroll
-});
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image:
+        radial-gradient(circle at 20% 30%, #ffffff 0 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, #ffffff 0 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, #ffffff 0 1px, transparent 1px);
+      background-size: 90px 90px, 130px 130px, 170px 170px;
+    }
 
-</script>
-<!-- JavaScript Files -->
-<script src="lazysizes.min.js" async></script>
-<script src="script.js"></script>
+    @media (max-width: 600px) {
+      .content {
+        transform: translateY(-5vh);
+      }
 
+      h1 {
+        font-size: clamp(2rem, 12vw, 3rem);
+      }
+
+      .footer-note {
+        font-size: 0.55rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="landing">
+    <div class="content">
+      <h1>Night Night<br />Studios</h1>
+      <p class="subtitle">An indie tale will soon begin.</p>
+    </div>
+
+    <p class="footer-note">
+      © 2026 Night Night Studios. All rights reserved.<br />
+      All stories, worlds, characters, and visual material are the intellectual property of Night Night Games.
+    </p>
+  </main>
+
+  <div class="grain"></div>
 </body>
 </html>
